@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Webpagenews from './Webpagenews';
+import Navbar from './component/Navbar';
+import { useState } from 'react';
+
 
 function App() {
+  const [value, setvalue] = useState("");
+  function xyz(ans){
+    console.log(ans)
+    setvalue(ans)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <Navbar xyz={xyz}/>
+    <Routes>
+     <Route path='/' element={<Webpagenews ans={value} />}/>
+     </Routes>
+     </BrowserRouter>
     </div>
   );
 }
