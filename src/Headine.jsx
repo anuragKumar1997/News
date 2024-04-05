@@ -43,7 +43,7 @@ setNews(Data.articles)
                 <h5 className="card-title text-warning">Author-{obj.author}</h5>
                 <Link
                   style={{ marginLeft: "50px",borderRadius:"40px",backgroundColor:"lightgreen" }}
-                  to="/"
+                  to={obj.url}
                   class="btn "
                 >
                   see full news

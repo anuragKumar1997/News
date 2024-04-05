@@ -28,7 +28,8 @@ let searchnews=searchref.current.value
  console.log(searchnews)
 
 }
-  return (
+  return (<div>
+ <marquee behavior="" direction="right"><h1 style={{color:"#007"}}>Top Enternational news headline</h1></marquee> 
    <div className="container-fluid">
    <form className="d-flex  w-50 m-auto mt-4" role="search">
   <input ref={searchref} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -54,7 +55,7 @@ let searchnews=searchref.current.value
                 alt="jhjhb"
               />
               <div className="card-body text-truncate">
-                <h5 className="card-title text-danger"> TITLE-{obj.title}</h5>
+              <marquee behavior="" direction="right"><h5 className="card-title text-danger"> TITLE-{obj.title}</h5></marquee>  
                 <h5 className="card-title text-warning">Author-{obj.author}</h5>
                 <Link
                   style={{marginLeft:"50px",borderRadius:"40px",backgroundColor:"lightgreen" }}
@@ -69,11 +70,12 @@ let searchnews=searchref.current.value
         })}
       </div>
       
-    <div style={{width:"300px"}} className="text-center main bg-success col-md-3 mt-3">  
+    <div style={{width:"300px"}} className="text-center main bg-success col-md-3 mt-3 mx-4">  
     <h3 className='bg-warning topheadline' style={{color:"#007"}}>TopHeadline</h3>
     <div className="main2 w-100">
 
     <Headine/>
+    </div>
     </div>
     </div>
     </div>

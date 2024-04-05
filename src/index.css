@@ -28,8 +28,8 @@ left:0;
 }
 .main2{
     position: absolute;
-    animation: move 250s linear infinite;
-    left: 8px;
+    animation: move 100s linear infinite;
+    left: 10px;
 }
 .topheadline{
     position: absolute;
